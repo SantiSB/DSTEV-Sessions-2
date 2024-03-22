@@ -1,0 +1,30 @@
+---
+const links = [
+  { href: "https://www.tuboleta.com/", text: "Tickets" },
+  { href: "https://wa.me/573502988602", text: "Contact" },
+];
+---
+
+<header
+  class="flex justify-between items-center py-5 w-full px-5 lg:px-32 xl:px-40"
+>
+  <a href="https://www.instagram.com/dstev.1"
+    ><img
+      src="icons/DSTEV.svg"
+      class="h-7 sm:h-10 fill-black"
+      alt="Santiago Salas Bolaños Logo"
+    /></a
+  >
+  <nav class="flex flex-row gap-x-4 text-base md:text-xl">
+    {
+      links.map((link) => (
+        <a
+          class="hover:text-ligthBlue focus:text-ligthBlue transition font-semibold text-white"
+          href={link.href}
+        >
+          {link.text}
+        </a>
+      ))
+    }
+  </nav>
+</header>

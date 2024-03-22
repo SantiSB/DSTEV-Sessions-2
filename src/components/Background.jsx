@@ -1,27 +1,36 @@
-<div id="star-background" class="fixed top-0 left-0 w-full h-screen z-[-1]">
-</div>
+import { useEffect, useRef } from "react";
+import * as THREE from "./threejs/three.module.js";
+import { EffectComposer } from "./threejs/EffectComposer.js";
+import { RenderPass } from "./threejs/RenderPass.js";
+import { ShaderPass } from "./threejs/ShaderPass.js";
+import { RGBShiftShader } from "./threejs/RGBShiftShader.js";
+import { DotScreenShader } from "./threejs/DotScreenShader.js";
 
-<script type="module">
-  import * as THREE from "/src/components/threejs/three.module.js";
-  import { EffectComposer } from "/src/components/threejs/EffectComposer.js";
-  import { RenderPass } from "/src/components/threejs/RenderPass.js";
-  import { ShaderPass } from "/src/components/threejs/ShaderPass.js";
-  import { RGBShiftShader } from "/src/components/threejs/RGBShiftShader.js";
-  import { DotScreenShader } from "/src/components/threejs/DotScreenShader.js";
-
+const Background = () => {
+  const starBackgroundRef = useRef(null);
   let camera, scene, renderer, composer;
   let object;
 
-  init();
-  animate();
+  useEffect(() => {
+    init();
+    animate();
 
-  function init() {
-    const starBackground = document.getElementById("star-background");
+    // Cleanup function
+    return () => {
+      window.removeEventListener("resize", onWindowResize);
+      renderer.dispose();
+      composer.dispose();
+    };
+  }, []);
 
-    renderer = new THREE.WebGLRenderer({ alpha: true }); // Habilita el fondo transparente
+  const init = () => {
+    renderer = new THREE.WebGLRenderer({ alpha: true });
     renderer.setPixelRatio(window.devicePixelRatio);
-    renderer.setSize(starBackground.offsetWidth, starBackground.offsetHeight);
-    starBackground.appendChild(renderer.domElement); // Agrega el elemento de renderizado al div
+    renderer.setSize(
+      starBackgroundRef.current.offsetWidth,
+      starBackgroundRef.current.offsetHeight
+    );
+    starBackgroundRef.current.appendChild(renderer.domElement);
 
     camera = new THREE.PerspectiveCamera(
       70,
@@ -64,7 +73,6 @@
     light.position.set(1, 1, 1);
     scene.add(light);
 
-    // Postprocessing
     composer = new EffectComposer(renderer);
     composer.addPass(new RenderPass(scene, camera));
 
@@ -76,27 +84,40 @@
     effect2.uniforms["amount"].value = 0.0015;
     composer.addPass(effect2);
 
-    // Asumiendo OutputPass existe y es válido; si no, quita esta parte
-    // const effect3 = new OutputPass();
-    // composer.addPass(effect3);
-
     window.addEventListener("resize", onWindowResize, false);
-  }
+  };
 
-  function onWindowResize() {
-    const starBackground = document.getElementById("star-background");
-    camera.aspect = starBackground.offsetWidth / starBackground.offsetHeight;
+  const onWindowResize = () => {
+    camera.aspect =
+      starBackgroundRef.current.offsetWidth /
+      starBackgroundRef.current.offsetHeight;
     camera.updateProjectionMatrix();
-    renderer.setSize(starBackground.offsetWidth, starBackground.offsetHeight);
-    composer.setSize(starBackground.offsetWidth, starBackground.offsetHeight);
-  }
+    renderer.setSize(
+      starBackgroundRef.current.offsetWidth,
+      starBackgroundRef.current.offsetHeight
+    );
+    composer.setSize(
+      starBackgroundRef.current.offsetWidth,
+      starBackgroundRef.current.offsetHeight
+    );
+  };
 
-  function animate() {
+  const animate = () => {
     requestAnimationFrame(animate);
 
     object.rotation.x += 0.005;
     object.rotation.y += 0.01;
 
     composer.render();
-  }
-</script>
+  };
+
+  return (
+    <div
+      id="star-background"
+      className="fixed top-0 left-0 w-full h-screen z-[-1]"
+      ref={starBackgroundRef}
+    ></div>
+  );
+};
+
+export default Background;

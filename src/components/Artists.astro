@@ -1,0 +1,127 @@
+---
+// import ArtistLogo from "@/components/ArtistLogo.astro";
+import Typography from "./Typography.astro";
+// import { ARTISTS } from "@/consts/artists";
+import Logo from "./icons/Logo.astro";
+
+const ARTISTS = [
+  {
+    id: 1,
+    name: "Patrocinador Uno",
+    url: "https://patrocinadoruno.com",
+    logo: "/logos/logo1.png",
+  },
+  {
+    id: 2,
+    name: "Patrocinador Dos",
+    url: "https://patrocinadordos.com",
+    logo: "/logos/logo2.png",
+  },
+  {
+    id: 3,
+    name: "Patrocinador Tres",
+    url: "https://patrocinadortres.com",
+    logo: "/logos/logo3.png",
+  },
+  {
+    id: 4,
+    name: "Patrocinador Cuatro",
+    url: "https://patrocinadorcuatro.com",
+    logo: "/logos/logo4.png",
+  },
+  {
+    id: 5,
+    name: "Patrocinador Cinco",
+    url: "https://patrocinadorcinco.com",
+    logo: "/logos/logo5.png",
+  },
+  {
+    id: 6,
+    name: "Patrocinador Seis",
+    url: "https://patrocinadorseis.com",
+    logo: "/logos/logo6.png",
+  },
+];
+---
+
+<section class="mb-40">
+  <div
+    class="w-full p-4 shadow-xl overflow-hidden relative"
+    style="background-color: rgba(0,0,0,0.8); backdrop-filter: blur(10px); "
+  >
+    <h2 class="text-white text-center text-2xl">
+      LINE UP
+    </h2>
+  </div>
+  <div
+    class="mt-12 grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-8 select-none px-5 lg:px-32 xl:px-40"
+  >
+    {
+      ARTISTS.map(({ name, url }) => (
+        <a
+          class="company-link group relative flex h-24 items-center justify-center overflow-hidden md:h-32"
+          title={`Visita la página del patrocinador ${name}`}
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`Link con el logo de ${name} que lleva a ${url}`}
+        >
+          <Logo />
+        </a>
+      ))
+    }
+  </div>
+</section>
+<style>
+  .company-link {
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.1) 0%,
+      transparent 100%
+    );
+    transition: all 0.5s ease;
+    backdrop-filter: blur(10px);
+  }
+
+  .company-link::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    display: block;
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.5) 0%,
+      transparent
+    );
+    opacity: 0;
+    height: 50%;
+    transition:
+      opacity 0.2s ease-in-out,
+      height 0.2s ease-in-out;
+  }
+
+  @media (prefers-reduced-motion) {
+    .company-link::before {
+      transition: none;
+    }
+  }
+
+  .company-link:hover::before,
+  .company-link:focus::before {
+    opacity: 0.8;
+    height: 90%;
+    box-shadow: 0 -4px 3px rgba(50, 50, 50, 0.75);
+  }
+
+  .company-link:hover .company-logo,
+  .company-link:focus .company-logo {
+    transform: scale(1.1);
+  }
+
+  @media (prefers-reduced-motion) {
+    .company-link:hover .company-logo,
+    .company-link:focus .company-logo {
+      transform: scale(1);
+    }
+  }
+</style>

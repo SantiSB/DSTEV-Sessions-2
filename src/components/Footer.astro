@@ -1,0 +1,87 @@
+---
+const patrocinadores = [
+  {
+    id: 1,
+    nombre: "Patrocinador Uno",
+    url: "https://www.patrocinadoruno.com",
+    logo: "https://flowbite.com/docs/images/logo.svg",
+  },
+  {
+    id: 2,
+    nombre: "Patrocinador Dos",
+    url: "https://www.patrocinadordos.com",
+    logo: "https://flowbite.com/docs/images/logo.svg",
+  },
+  {
+    id: 3,
+    nombre: "Patrocinador Tres",
+    url: "https://www.patrocinadortres.com",
+    logo: "https://flowbite.com/docs/images/logo.svg",
+  },
+  {
+    id: 4,
+    nombre: "Patrocinador Cuatro",
+    url: "https://www.patrocinadorcuatro.com",
+    logo: "https://flowbite.com/docs/images/logo.svg",
+  },
+  {
+    id: 5,
+    nombre: "Patrocinador Cinco",
+    url: "https://www.patrocinadorcinco.com",
+    logo: "https://flowbite.com/docs/images/logo.svg",
+  },
+  {
+    id: 6,
+    nombre: "Patrocinador Seis",
+    url: "https://www.patrocinadorseis.com",
+    logo: "https://flowbite.com/docs/images/logo.svg",
+  },
+];
+---
+
+<footer class="bg-black bg-opacity-50 shadow dark:bg-black dark:bg-opacity-50">
+  <div class="w-full max-w-full mx-auto p-10 md:py-8 text-center">
+    <div class="sm:flex sm:items-center sm:justify-between">
+      <a
+        href="https://flowbite.com/"
+        class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse"
+      >
+        <img
+          src="https://flowbite.com/docs/images/logo.svg"
+          class="h-8"
+          alt="Flowbite Logo"
+        />
+        <span
+          class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+          >DSTEV Sessions II</span
+        >
+      </a>
+      <ul class="flex flex-wrap items-center justify-center mb-6 sm:mb-0">
+        {
+          patrocinadores.map((patrocinador) => (
+            <li class="mr-4 md:mr-6">
+              <a
+                href={patrocinador.url}
+                class="hover:underline block"
+                title={patrocinador.nombre}
+              >
+                <img
+                  src={patrocinador.logo}
+                  alt={`Logo de ${patrocinador.nombre}`}
+                  class="h-8 mx-auto"
+                />
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+    <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+    <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400"
+      >© 2024 - DSTEV Sessions II Oficial - Desarrollo: <a
+        href="https://flowbite.com/"
+        class="hover:underline">Santiago Salas.</a
+      ></span
+    >
+  </div>
+</footer>

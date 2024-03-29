@@ -4,14 +4,14 @@ import Artist from "./Artist.astro";
 import { ARTISTS } from "./Data";
 ---
 
-<section>
+<section class="mb-10 md:mb-0">
   <h2 class="text-center text-4xl text-3d font-goldman text-white">LINE UP</h2>
   <div
-    class="mt-32 grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-8 select-none px-5 lg:px-32 xl:px-40"
+    class="mt-20 md:mt-32 grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-8 select-none px-5 lg:px-32 xl:px-40"
   >
     {ARTISTS.map(({ name, url }) => <Artist name={name} url={url} />)}
   </div>
-  <div class="flex justify-center mt-12">
+  <div class="flex justify-center mt-4">
     <TicketsButton />
   </div>
 </section>

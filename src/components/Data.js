@@ -3,9 +3,9 @@ export const ticketsNotAvalible = true;
 export const SPONSORS = [
   {
     id: 1,
-    nombre: "Sponsor Uno",
-    url: "https://www.sponsoruno.com",
-    logo: "/icons/Sponsor.png",
+    nombre: "Arkhes",
+    url: "https://www.instagram.com/__arkhes/",
+    logo: "/icons/sponsors/Arkhes.png",
   },
   {
     id: 2,

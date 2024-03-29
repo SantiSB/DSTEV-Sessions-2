@@ -32,12 +32,26 @@ const { title } = Astro.props;
   </body>
 </html>
 <style is:global>
+  @font-face {
+    font-family: "Cygnito Mono";
+    src: url("/fonts/cygnito-mono.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+  }
+
   html {
-    font-family: "Tektur", "Goldman", system-ui;
+    font-family: "Tektur", "Goldman", "Cygnito Mono", system-ui;
     scroll-behavior: smooth;
   }
   body {
     margin: 0px;
     background: black;
+  }
+  .text-3d {
+    text-shadow:
+      1px 1px 0 #000,
+      2px 2px 0 #000,
+      3px 3px 0 #000,
+      4px 4px 0 #000;
   }
 </style>

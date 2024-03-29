@@ -5,10 +5,8 @@ export default {
     extend: {
       fontFamily: {
         goldman: ["Goldman", "display"],
-        oxanium: ["Oxanium", "display"],
-        kelly: ["Kelly Slab", "display"],
-        offside: ["Offside", "display"],
-        blackops: ["Black Ops One", "display"],
+        cygnito: ["Cygnito Mono", "display"],
+        tektur: ["Tektur", "display"],
       },
     },
   },

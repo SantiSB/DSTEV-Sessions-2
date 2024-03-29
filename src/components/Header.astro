@@ -6,7 +6,7 @@ import { links, ticketsNotAvalible } from "./Data";
   class="flex justify-between items-center py-5 w-full px-5 lg:px-32 xl:px-40"
 >
   <a
-    href="https://www.instagram.com/dstev.1"
+    href="https://www.instagram.com/__arkhes/"
     class="hover:scale-110 transition-transform duration-300"
     target="_blank"
   >
@@ -21,7 +21,7 @@ import { links, ticketsNotAvalible } from "./Data";
     {
       links.map((link) => (
         <a
-          class={`text-3d transition-transform duration-300 ease-in-out transform ${ticketsNotAvalible ? "cursor-not-allowed text-gray-400" : "hover:scale-110 transition-transform duration-300 text-white"} font-semibold`}
+          class={`text-3d transition-transform duration-300 ease-in-out transform ${ticketsNotAvalible ? "cursor-not-allowed text-gray-500" : "hover:scale-110 transition-transform duration-300 text-white"} font-semibold`}
           href={ticketsNotAvalible ? undefined : link.href}
           aria-disabled={ticketsNotAvalible ? "true" : "false"}
           tabindex={ticketsNotAvalible ? -1 : undefined}
@@ -33,12 +33,3 @@ import { links, ticketsNotAvalible } from "./Data";
   </nav>
 </header>
 
-<style>
-  .text-3d {
-    text-shadow:
-      1px 1px 0 #000,
-      2px 2px 0 #000,
-      3px 3px 0 #000,
-      4px 4px 0 #000;
-  }
-</style>

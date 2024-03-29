@@ -10,18 +10,10 @@ const { name, url } = Astro.props;
   rel="noopener noreferrer"
   aria-label={`Link con la imagen de ${name} que lleva a ${url}`}
 >
-  <img src="/artists/SecretArtist.png" alt={`${name} logo`} class="artist-photo" />
+  <img src="/images/artists/SecretArtist.png" alt={`${name} logo`} class="artist-photo" />
 </a>
 
 <style>
-  .text-3d {
-    color: #fff;
-    text-shadow:
-      1px 1px 0 #000,
-      2px 2px 0 #000,
-      3px 3px 0 #000,
-      4px 4px 0 #000;
-  }
   .artist-link {
   height: 70%;
   background: linear-gradient(to bottom, rgb(0, 0, 0) 0%, transparent 100%);

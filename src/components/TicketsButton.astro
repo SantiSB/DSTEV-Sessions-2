@@ -5,7 +5,7 @@ import { ticketsNotAvalible } from "./Data";
 <a
   href={ticketsNotAvalible ? undefined : "https://www.tuboleta.com/"}
   target="_blank"
-  class={`inline-block mt-5 px-8 py-4 text-lg lg:text-xl font-semibold  transition duration-500 ease-in-out transform ${ticketsNotAvalible ? "cursor-not-allowed bg-black text-gray-800" : "text-white hover:scale-110 bg-black hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2"} `}
+  class={`inline-block mt-5 px-8 py-4 text-lg lg:text-xl font-semibold  transition duration-500 ease-in-out transform ${ticketsNotAvalible ? "cursor-not-allowed bg-black text-gray-500" : "text-white hover:scale-110 bg-black hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2"} `}
   style={ticketsNotAvalible
     ? ""
     : "--tw-bg-opacity: 1; background-color: rgba(0,0,0,var(--tw-bg-opacity)); backdrop-filter: blur(10px); animation: border-flashing 2s infinite; box-shadow: 0 0 20px rgba(0, 255, 42, 0.111); border: 2px solid transparent;"}

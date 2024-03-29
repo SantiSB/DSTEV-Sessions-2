@@ -19,24 +19,6 @@ export const SPONSORS = [
     url: "https://www.sponsortres.com",
     logo: "/icons/Sponsor.png",
   },
-  {
-    id: 4,
-    nombre: "Sponsor Cuatro",
-    url: "https://www.sponsorcuatro.com",
-    logo: "/icons/Sponsor.png",
-  },
-  {
-    id: 5,
-    nombre: "Sponsor Cinco",
-    url: "https://www.sponsorcinco.com",
-    logo: "/icons/Sponsor.png",
-  },
-  {
-    id: 6,
-    nombre: "Sponsor Seis",
-    url: "https://www.sponsorseis.com",
-    logo: "/icons/Sponsor.png",
-  },
 ];
 
 export const ARTISTS = [

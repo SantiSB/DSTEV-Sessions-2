@@ -1,0 +1,28 @@
+---
+import TicketsButton from "./TicketsButton.astro";
+import Artist from "./Artist.astro";
+import { ARTISTS } from "./Data";
+---
+
+<section class="mb-28">
+  <h2 class="text-center text-4xl text-3d font-goldman">LINE UP</h2>
+  <div
+    class="mt-32 grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-8 select-none px-5 lg:px-32 xl:px-40"
+  >
+    {ARTISTS.map(({ name, url }) => <Artist name={name} url={url} />)}
+  </div>
+  <div class="flex justify-center mt-12">
+    <TicketsButton />
+  </div>
+</section>
+
+<style>
+  .text-3d {
+    color: #fff;
+    text-shadow:
+      1px 1px 0 #000,
+      2px 2px 0 #000,
+      3px 3px 0 #000,
+      4px 4px 0 #000;
+  }
+</style>

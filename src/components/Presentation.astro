@@ -1,28 +1,38 @@
+---
+import TicketsButton from "./TicketsButton.astro";
+---
+
 <main
   class="flex items-center justify-center min-h-screen"
   style="display: flex; align-items: center; justify-content: center; height: 100vh; margin-top: -10vh;"
 >
   <div class="flex flex-col items-center justify-center w-full">
     <div
-      class="rounded-3xl overflow-hidden p-5 bg-opacity-10 bg-black text-center"
+      class="rounded-3xl overflow-hidden p-5 bg-opacity-10 bg-black text-center text-3d"
     >
-      <p class="text-7xl lg:text-9xl font-bold text-white drop-shadow-lg">
-        DSTEV
-      </p>
-      <p class="text-4xl lg:text-6xl font-semibold text-white drop-shadow-md">
+      <img
+        src="/icons/DSTEV.png"
+        class="h-20 fill-current text-black"
+        alt="Santiago Salas Bolaños Logo"
+      />
+      <p class="text-4xl sm:text-6xl text-white drop-shadow-md font-goldman">
         Sessions #2
       </p>
-      <p class="text-base lg:text-2xl text-white drop-shadow">
-        22 de Marzo
+      <p class="text-base sm:text-2xl text-white drop-shadow mt-5">
+        Muy pronto
       </p>
     </div>
-    <a
-      href="https://www.tuboleta.com/"
-      target="_blank"
-      class="inline-block mt-5 px-8 py-4 border border-gray-700 text-lg lg:text-xl font-semibold rounded-md text-white bg-black hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-green-500/50 focus:ring-offset-2 transition duration-300 ease-in-out transform hover:scale-105 shadow-xl"
-      style="background-color: rgba(0,0,0,0.8); backdrop-filter: blur(10px); box-shadow: 0 0 15px rgba(0,255,0,0.2);"
-    >
-      Tickets
-    </a>
+    <TicketsButton />
   </div>
 </main>
+
+<style>
+  .text-3d {
+    color: #fff;
+    text-shadow:
+      1px 1px 0 #000,
+      2px 2px 0 #000,
+      3px 3px 0 #000,
+      4px 4px 0 #000;
+  }
+</style>

@@ -3,6 +3,7 @@ import Background from "../components/Background.jsx";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import "@fontsource/goldman";
+import "@fontsource/tektur";
 
 interface Props {
   title: string;
@@ -15,7 +16,10 @@ const { title } = Astro.props;
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="DSTEV Sessions #2" content="DSTEV Sessions #2 - Sitio Oficial" />
+    <meta
+      name="DSTEV Sessions #2"
+      content="DSTEV Sessions #2 - Sitio Oficial"
+    />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/icons/DSTEV.svg" />
     <title>{title}</title>
@@ -29,12 +33,11 @@ const { title } = Astro.props;
 </html>
 <style is:global>
   html {
-    font-family: "Goldman", system-ui;
+    font-family: "Tektur", "Goldman", system-ui;
     scroll-behavior: smooth;
   }
   body {
     margin: 0px;
-    /* overflow: clip; */
     background: black;
   }
 </style>

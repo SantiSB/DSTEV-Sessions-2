@@ -15,6 +15,7 @@
     "@astrojs/react": "^3.1.0",
     "@astrojs/tailwind": "^5.1.0",
     "@fontsource/goldman": "^5.0.19",
+    "@fontsource/tektur": "^5.0.4",
     "@types/react": "^18.2.67",
     "@types/react-dom": "^18.2.22",
     "astro": "^4.5.5",

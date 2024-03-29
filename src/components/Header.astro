@@ -1,26 +1,30 @@
 ---
-const links = [
-  { href: "https://www.tuboleta.com/", text: "Tickets" },
-  { href: "https://wa.me/573502988602", text: "Contact" },
-];
+import { links, ticketsNotAvalible } from "./Data";
 ---
 
 <header
   class="flex justify-between items-center py-5 w-full px-5 lg:px-32 xl:px-40"
 >
-  <a href="https://www.instagram.com/dstev.1"
-    ><img
-      src="icons/DSTEV.svg"
-      class="h-7 sm:h-10 fill-black"
-      alt="Santiago Salas Bolaños Logo"
-    /></a
+  <a
+    href="https://www.instagram.com/dstev.1"
+    class="hover:scale-110 transition-transform duration-300"
+    target="_blank"
   >
+    <img
+      src="/icons/DSTEV.png"
+      class="h-6 fill-current text-black"
+      alt="Santiago Salas Bolaños Logo"
+    />
+  </a>
+
   <nav class="flex flex-row gap-x-4 text-base md:text-xl">
     {
       links.map((link) => (
         <a
-          class="hover:text-ligthBlue focus:text-ligthBlue transition font-semibold text-white"
-          href={link.href}
+          class={`text-3d transition-transform duration-300 ease-in-out transform ${ticketsNotAvalible ? "cursor-not-allowed text-gray-400" : "hover:scale-110 transition-transform duration-300 text-white"} font-semibold`}
+          href={ticketsNotAvalible ? undefined : link.href}
+          aria-disabled={ticketsNotAvalible ? "true" : "false"}
+          tabindex={ticketsNotAvalible ? -1 : undefined}
         >
           {link.text}
         </a>
@@ -28,3 +32,13 @@ const links = [
     }
   </nav>
 </header>
+
+<style>
+  .text-3d {
+    text-shadow:
+      1px 1px 0 #000,
+      2px 2px 0 #000,
+      3px 3px 0 #000,
+      4px 4px 0 #000;
+  }
+</style>

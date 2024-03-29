@@ -15,7 +15,6 @@ const Background = () => {
     init();
     animate();
 
-    // Cleanup function
     return () => {
       window.removeEventListener("resize", onWindowResize);
       renderer.dispose();

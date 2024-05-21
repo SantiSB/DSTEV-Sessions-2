@@ -1,17 +1,23 @@
 ---
 import TicketsButton from "./TicketsButton.astro";
 import Artist from "./Artist.astro";
-import { ARTISTS } from "./Data";
+import { ARTISTS, preRegisterNotAvalible } from "./Data";
 ---
 
 <section class="mb-10 md:mb-0">
-  <h2 class="text-center text-4xl text-3d font-goldman text-white">LINE UP</h2>
+  <h2 class="text-center text-4xl text-3d font-goldman text-white">
+    LINE UP (Pronto)
+  </h2>
   <div
     class="mt-20 md:mt-32 grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-8 select-none px-5 lg:px-32 xl:px-40"
   >
     {ARTISTS.map(({ name, url }) => <Artist name={name} url={url} />)}
   </div>
   <div class="flex justify-center mt-4">
-    <TicketsButton />
+    <TicketsButton
+      href="https://docs.google.com/forms/d/e/1FAIpQLScsXFUK5TeHC5pSBSAT_VI13Yiz5S2BqhfSDpVy_grsz2iwdA/viewform?pli=1"
+      isNotAvailable={preRegisterNotAvalible}
+      text="Pre-Registro"
+    />
   </div>
 </section>

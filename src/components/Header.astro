@@ -1,5 +1,5 @@
 ---
-import { links, ticketsNotAvalible } from "./Data";
+import { links } from "./Data";
 ---
 
 <header
@@ -21,10 +21,11 @@ import { links, ticketsNotAvalible } from "./Data";
     {
       links.map((link) => (
         <a
-          class={`text-3d transition-transform duration-300 ease-in-out transform ${ticketsNotAvalible ? "cursor-not-allowed text-gray-500" : "hover:scale-110 transition-transform duration-300 text-white"} font-semibold`}
-          href={ticketsNotAvalible ? undefined : link.href}
-          aria-disabled={ticketsNotAvalible ? "true" : "false"}
-          tabindex={ticketsNotAvalible ? -1 : undefined}
+          class={`text-3d transition-transform duration-300 ease-in-out transform ${link.disabled ? "cursor-not-allowed text-gray-500" : "hover:scale-110 transition-transform duration-300 text-white"} font-semibold`}
+          href={link.disabled ? undefined : link.href}
+          aria-disabled={link.disabled ? "true" : "false"}
+          tabindex={link.disabled ? -1 : undefined}
+          target="_blank"
         >
           {link.text}
         </a>
@@ -32,4 +33,3 @@ import { links, ticketsNotAvalible } from "./Data";
     }
   </nav>
 </header>
-

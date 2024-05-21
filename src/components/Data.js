@@ -1,11 +1,19 @@
 export const ticketsNotAvalible = true;
+export const preRegisterNotAvalible = false;
+
+export const links = [
+  { href: "https://docs.google.com/forms/d/e/1FAIpQLScsXFUK5TeHC5pSBSAT_VI13Yiz5S2BqhfSDpVy_grsz2iwdA/viewform?pli=1", text: "Pre-Registro", disabled: preRegisterNotAvalible},
+  { href: "https://www.tuboleta.com/", text: "Tickets", disabled: ticketsNotAvalible},
+  { href: "https://wa.me/573187866592", text: "Contact", disabled: true},
+];
+
 
 export const SPONSORS = [
   {
     id: 1,
     nombre: "Arkhes",
     url: "https://www.instagram.com/__arkhes/",
-    logo: "/icons/sponsors/Arkhes.png",
+    logo: "/icons/MainIcon.png",
   },
   {
     id: 2,
@@ -60,7 +68,3 @@ export const ARTISTS = [
   },
 ];
 
-export const links = [
-  { href: "https://www.tuboleta.com/", text: "Tickets" },
-  { href: "https://wa.me/573502988602", text: "Contact" },
-];

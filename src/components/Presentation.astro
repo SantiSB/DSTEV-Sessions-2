@@ -1,4 +1,5 @@
 ---
+import { preRegisterNotAvalible } from "./Data";
 import TicketsButton from "./TicketsButton.astro";
 ---
 
@@ -15,13 +16,20 @@ import TicketsButton from "./TicketsButton.astro";
         class="h-10 sm:h-20 fill-current text-black"
         alt="DSTEV Logo"
       />
-      <p class="text-4xl sm:text-5xl text-white drop-shadow-md font-cygnito" style="transform: scaleY(0.6)">
+      <p
+        class="text-4xl sm:text-5xl text-white drop-shadow-md font-cygnito"
+        style="transform: scaleY(0.6)"
+      >
         SESSIONS 2°
       </p>
       <p class="text-base sm:text-2xl text-white drop-shadow mt-5">
         Muy pronto
       </p>
     </div>
-    <TicketsButton />
+    <TicketsButton
+      href="https://docs.google.com/forms/d/e/1FAIpQLScsXFUK5TeHC5pSBSAT_VI13Yiz5S2BqhfSDpVy_grsz2iwdA/viewform?pli=1"
+      isNotAvailable={preRegisterNotAvalible}
+      text="Pre-Registro"
+    />
   </div>
 </main>

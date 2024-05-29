@@ -1,7 +1,7 @@
 ---
 import TicketsButton from "./TicketsButton.astro";
 import Artist from "./Artist.astro";
-import { ARTISTS, ticketsNotAvalible } from "./Data";
+import { ARTISTS, ticketsNotAvailable } from "./Data";
 ---
 
 <section class="mb-10 md:mb-0">
@@ -15,9 +15,10 @@ import { ARTISTS, ticketsNotAvalible } from "./Data";
   </div>
   <div class="flex justify-center mt-4">
     <TicketsButton
-      href="https://wa.me/573187866592"
-      isNotAvailable={ticketsNotAvalible}
-      text="Ticktes"
+      phoneNumber="573187866592"
+      message="Hola ! Quiero mi ticket para DSTEV Sessions #2"
+      isNotAvailable={ticketsNotAvailable}
+      text="Tickets"
     />
   </div>
 </section>

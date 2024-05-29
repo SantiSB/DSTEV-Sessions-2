@@ -1,0 +1,22 @@
+---
+import { generateWhatsAppLink } from "../utils/whatsApp";
+import WhatsAppIcon from "./WhatsAppIcon.astro";
+
+interface WhatsAppButtonProps {
+  phoneNumber: string;
+  message?: string;
+}
+
+const { phoneNumber, message } = Astro.props as WhatsAppButtonProps;
+const waLink = generateWhatsAppLink(phoneNumber, message);
+---
+
+<a
+  href={waLink}
+  target="_blank"
+  rel="noopener noreferrer"
+  class="fixed bottom-4 right-4 z-50 p-3 bg-green-500 rounded-full shadow-lg transition-all duration-300 ease-in-out transform hover:scale-110"
+  aria-label="Chat with us on WhatsApp"
+>
+  <WhatsAppIcon />
+</a>

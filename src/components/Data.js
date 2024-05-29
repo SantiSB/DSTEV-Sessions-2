@@ -1,11 +1,12 @@
-export const ticketsNotAvalible = false;
+export const ticketsNotAvailable = false;
 export const preRegisterNotAvalible = true;
 
 export const links = [
   // { href: "https://docs.google.com/forms/d/e/1FAIpQLScsXFUK5TeHC5pSBSAT_VI13Yiz5S2BqhfSDpVy_grsz2iwdA/viewform?pli=1", text: "Pre-Registro", disabled: preRegisterNotAvalible},
-  { href: "https://wa.me/573187866592", text: "Tickets", disabled: ticketsNotAvalible},
-  // { href: "https://wa.me/573187866592", text: "Contact", disabled: false},
+  { phoneNumber: "573187866592", message: "Hola ! Quiero mi ticket para DSTEV Sessions #2", text: "Tickets", disabled: ticketsNotAvailable },
+  // { phoneNumber: "573187866592", text: "Contact", disabled: false },
 ];
+
 
 
 export const SPONSORS = [

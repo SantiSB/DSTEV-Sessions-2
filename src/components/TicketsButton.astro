@@ -1,5 +1,8 @@
 ---
-const { href, isNotAvailable, text } = Astro.props;
+import { generateWhatsAppLink } from "../utils/whatsApp";
+
+const { phoneNumber, message, isNotAvailable, text } = Astro.props;
+const href = generateWhatsAppLink(phoneNumber, message);
 ---
 
 <a

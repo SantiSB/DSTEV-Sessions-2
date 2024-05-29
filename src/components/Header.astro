@@ -1,4 +1,5 @@
 ---
+import { generateWhatsAppLink } from "../utils/whatsApp";
 import { links } from "./Data";
 ---
 
@@ -19,17 +20,20 @@ import { links } from "./Data";
 
   <nav class="flex flex-row gap-x-4 text-base md:text-xl">
     {
-      links.map((link) => (
-        <a
-          class={`text-3d transition-transform duration-300 ease-in-out transform ${link.disabled ? "cursor-not-allowed text-gray-500" : "hover:scale-110 transition-transform duration-300 text-white"} font-semibold`}
-          href={link.disabled ? undefined : link.href}
-          aria-disabled={link.disabled ? "true" : "false"}
-          tabindex={link.disabled ? -1 : undefined}
-          target="_blank"
-        >
-          {link.text}
-        </a>
-      ))
+      links.map((link) => {
+        const href = generateWhatsAppLink(link.phoneNumber, link.message);
+        return (
+          <a
+            class={`text-3d transition-transform duration-300 ease-in-out transform ${link.disabled ? "cursor-not-allowed text-gray-500" : "hover:scale-110 transition-transform duration-300 text-white"} font-semibold`}
+            href={link.disabled ? undefined : href}
+            aria-disabled={link.disabled ? "true" : "false"}
+            tabindex={link.disabled ? -1 : undefined}
+            target="_blank"
+          >
+            {link.text}
+          </a>
+        );
+      })
     }
   </nav>
 </header>

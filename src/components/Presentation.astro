@@ -1,5 +1,5 @@
 ---
-import { ticketsNotAvalible } from "./Data";
+import { ticketsNotAvailable } from "./Data";
 import TicketsButton from "./TicketsButton.astro";
 ---
 
@@ -27,9 +27,10 @@ import TicketsButton from "./TicketsButton.astro";
       </p>
     </div>
     <TicketsButton
-      href="https://wa.me/573187866592"
-      isNotAvailable={ticketsNotAvalible}
-      text="Ticktes"
+      phoneNumber="573187866592"
+      message="Hola ! Quiero mi ticket para DSTEV Sessions #2"
+      isNotAvailable={ticketsNotAvailable}
+      text="Tickets"
     />
   </div>
 </main>

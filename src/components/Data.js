@@ -1,10 +1,10 @@
-export const ticketsNotAvalible = true;
-export const preRegisterNotAvalible = false;
+export const ticketsNotAvalible = false;
+export const preRegisterNotAvalible = true;
 
 export const links = [
-  { href: "https://docs.google.com/forms/d/e/1FAIpQLScsXFUK5TeHC5pSBSAT_VI13Yiz5S2BqhfSDpVy_grsz2iwdA/viewform?pli=1", text: "Pre-Registro", disabled: preRegisterNotAvalible},
-  { href: "https://www.tuboleta.com/", text: "Tickets", disabled: ticketsNotAvalible},
-  { href: "https://wa.me/573187866592", text: "Contact", disabled: true},
+  // { href: "https://docs.google.com/forms/d/e/1FAIpQLScsXFUK5TeHC5pSBSAT_VI13Yiz5S2BqhfSDpVy_grsz2iwdA/viewform?pli=1", text: "Pre-Registro", disabled: preRegisterNotAvalible},
+  { href: "https://wa.me/573187866592", text: "Tickets", disabled: ticketsNotAvalible},
+  // { href: "https://wa.me/573187866592", text: "Contact", disabled: false},
 ];
 
 
@@ -15,18 +15,18 @@ export const SPONSORS = [
     url: "https://www.instagram.com/__arkhes/",
     logo: "/icons/MainIcon.png",
   },
-  {
-    id: 2,
-    nombre: "Sponsor Dos",
-    url: "https://www.sponsordos.com",
-    logo: "/icons/Sponsor.png",
-  },
-  {
-    id: 3,
-    nombre: "Sponsor Tres",
-    url: "https://www.sponsortres.com",
-    logo: "/icons/Sponsor.png",
-  },
+  // {
+  //   id: 2,
+  //   nombre: "Sponsor Dos",
+  //   url: "https://www.sponsordos.com",
+  //   logo: "/icons/Sponsor.png",
+  // },
+  // {
+  //   id: 3,
+  //   nombre: "Sponsor Tres",
+  //   url: "https://www.sponsortres.com",
+  //   logo: "/icons/Sponsor.png",
+  // },
 ];
 
 export const ARTISTS = [

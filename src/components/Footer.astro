@@ -1,38 +1,97 @@
----
-import { SPONSORS } from "./Data";
----
-
 <footer class="bg-black bg-opacity-50 shadow dark:bg-black dark:bg-opacity-50">
-  <div class="w-full max-w-full mx-auto p-4 md:p-10 text-center">
+  <div class="w-full max-w-full mx-auto p-2 md:p-10 text-center">
     <div class="sm:flex sm:items-center sm:justify-between">
       <a
         href="https://www.instagram.com/dstev.1/"
-        class="flex justify-center items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse"
+        class="flex justify-center h-20 p-2 items-center mb-2 sm:mb-0 space-x-3 rtl:space-x-reverse"
       >
-        <img src="/icons/DSTEV.png" class="h-6 sm:h-10" alt="Flowbite Logo" />
+        <img src="/icons/DSTEV.png" class="h-full w-full" alt="Flowbite Logo" />
       </a>
-      <ul class="flex flex-wrap items-center justify-center mb-6 sm:mb-0 gap-4">
-        {
-          SPONSORS.map((sponsor) => (
-            <li class="flex-shrink-0 w-16 h-16 md:h-20 flex justify-center items-center transition-transform duration-300 ease-in-out transform hover:-translate-y-1 focus:-translate-y-1">
-              <a
-                href={sponsor.url}
-                class="hover:underline block"
-                title={sponsor.nombre}
-                target="_blank"
-              >
-                <img
-                  src={sponsor.logo}
-                  alt={`Logo de ${sponsor.nombre}`}
-                  class="h-full w-full object-contain"
-                />
-              </a>
-            </li>
-          ))
-        }
+      <ul class="flex flex-wrap items-center justify-center mb-2 sm:mb-0 gap-2">
+        <li
+          class="flex-shrink-0 w-16 h-16 flex justify-center items-center transition-transform duration-300 ease-in-out transform hover:-translate-y-1 focus:-translate-y-1 "
+        >
+          <a
+            href="https://www.instagram.com/selectormusic_/"
+            class="hover:underline block"
+            title="Selector"
+            target="_blank"
+          >
+            <img
+              src="/icons/sponsors/Selector.png"
+              alt="Logo de Selector"
+              class="h-full w-full object-contain"
+            />
+          </a>
+        </li>
+        <li
+          class="flex-shrink-0 w-14 h-14 flex justify-center items-center transition-transform duration-300 ease-in-out transform hover:-translate-y-1 focus:-translate-y-1"
+        >
+          <a
+            href="https://www.instagram.com/jagermeister_co/"
+            class="hover:underline block"
+            title="Jagermeister"
+            target="_blank"
+          >
+            <img
+              src="/icons/sponsors/Jagermeister.png"
+              alt="Logo de Jagermeister"
+              class="h-full w-full object-contain"
+            />
+          </a>
+        </li>
+        <li
+          class="flex-shrink-0 w-16 h-16 flex justify-center items-center transition-transform duration-300 ease-in-out transform hover:-translate-y-1 focus:-translate-y-1"
+        >
+          <a
+            href="https://www.instagram.com/1537cs/"
+            class="hover:underline block"
+            title="1537"
+            target="_blank"
+          >
+            <img
+              src="/icons/sponsors/1537.png"
+              alt="Logo de 1537"
+              class="h-full w-full object-contain"
+            />
+          </a>
+        </li>
+        <li
+          class="flex-shrink-0 w-14 h-14 md:h-20 flex justify-center items-center transition-transform duration-300 ease-in-out transform hover:-translate-y-1 focus:-translate-y-1"
+        >
+          <a
+            href="https://www.instagram.com/360cs/"
+            class="hover:underline block"
+            title="360cs"
+            target="_blank"
+          >
+            <img
+              src="/icons/sponsors/360.png"
+              alt="Logo de 360cs"
+              class="h-full w-full object-contain"
+            />
+          </a>
+        </li>
+
+        <li
+          class="flex-shrink-0 w-14 h-14 flex justify-center items-center transition-transform duration-300 ease-in-out transform hover:-translate-y-1 focus:-translate-y-1"
+        >
+          <a
+            href="https://www.instagram.com/__arkhes/"
+            class="hover:underline block"
+            title="Arkhes"
+            target="_blank"
+          >
+            <img
+              src="/icons/sponsors/Arkhes.png"
+              alt="Logo de Arkhes"
+              class="h-full w-full object-contain"
+            />
+          </a>
+        </li>
       </ul>
     </div>
-    <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+    <hr class="my-4 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
     <span class="block text-xs text-gray-500 sm:text-center dark:text-gray-400"
       >Arkhes Web Oficial - <a
         href="https://www.instagram.com/santi.salasb/"

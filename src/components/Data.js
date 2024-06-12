@@ -22,7 +22,7 @@ export const SPONSORS = [
   {
     id: 2,
     nombre: "360cs",
-    instagram: "https://www.instagram.com/360cs/",
+    instagram: "https://www.instagram.com/360cs1/",
     src: "/icons/sponsors/360.png",
   },
   {
@@ -67,7 +67,7 @@ export const ARTISTS = [
   {
     id: 4,
     name: "F*ck System",
-    instagram: "https://www.instagram.com/fcksystem_/",
+    instagram: "https://www.instagram.com/yosoyafer/",
     src: "/images/artists/FckSystem.png",
   },
   {

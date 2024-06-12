@@ -8,10 +8,25 @@ import { ARTISTS, ticketsNotAvailable } from "./Data";
   <h2 class="text-center text-4xl text-3d font-goldman text-white">
     LINE UP (Pronto)
   </h2>
-  <div
-    class="mt-20 md:mt-32 grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-8 select-none px-5 lg:px-32 xl:px-40"
-  >
-    {ARTISTS.map(({ name, url }) => <Artist name={name} url={url} />)}
+  <div class="mt-20 md:mt-32 space-y-8 px-5 lg:px-32 xl:px-40">
+    <div class="flex justify-center gap-4">
+      {
+        ARTISTS.filter((artist) => artist.row === 1).map(
+          ({ name, src, instagram }) => (
+            <Artist name={name} src={src} instagram={instagram} />
+          )
+        )
+      }
+    </div>
+    <div class="flex justify-center gap-4 mt-8">
+      {
+        ARTISTS.filter((artist) => artist.row === 2).map(
+          ({ name, src, instagram }) => (
+            <Artist name={name} src={src} instagram={instagram} />
+          )
+        )
+      }
+    </div>
   </div>
   <div class="flex justify-center mt-4">
     <TicketsButton

@@ -1,81 +1,86 @@
 ---
-const { name, url } = Astro.props;
+const { name, src, instagram } = Astro.props;
 ---
 
 <a
-  class="artist-link group relative flex h-24 items-center justify-center overflow-hidden md:h-32"
+  class="artist-link group relative flex h-24 w-60 items-center justify-center overflow-hidden md:h-32"
   title={`Visita la página del artista ${name}`}
-  href={url}
+  href={src}
   target="_blank"
   rel="noopener noreferrer"
-  aria-label={`Link con la imagen de ${name} que lleva a ${url}`}
+  aria-label={`Link con la imagen de ${name} que lleva a ${instagram}`}
 >
-  <img src="/images/artists/SecretArtist.png" alt={`${name} logo`} class="artist-photo" />
+  <img src={src} alt={`${name} logo`} class="artist-photo" />
 </a>
 
 <style>
   .artist-link {
-  height: 70%;
-  background: linear-gradient(to bottom, rgb(0, 0, 0) 0%, transparent 100%);
-  transition: all 0.5s ease-out;
-  backdrop-filter: blur(10px);
-  overflow: visible;
-  position: relative;
-}
-
-.artist-link::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  display: block;
-  background: linear-gradient(
-    to bottom,
-    rgba(212, 212, 212, 0.4) 0%,
-    transparent
-  );
-  opacity: 0;
-  height: 50%;
-  transition: opacity 0.5s ease-out, height 0.5s ease-out;
-}
-
-.artist-photo {
-  transition: transform 0.5s ease-out, filter 0.5s ease-out;
-  transform: translateY(-10%);
-  filter: grayscale(100%);
-}
-
-@keyframes floatSpace {
-  0%, 100% {
-    transform: translateY(-10%);
+    height: 70%;
+    background: linear-gradient(to bottom, rgb(0, 0, 0) 0%, transparent 100%);
+    transition: all 0.5s ease-out;
+    backdrop-filter: blur(10px);
+    overflow: visible;
+    position: relative;
   }
-  50% {
-    transform: translateY(-12%);
-  }
-}
 
-@media (prefers-reduced-motion) {
   .artist-link::before {
-    transition: none;
+    content: "";
+    position: absolute;
+    inset: 0;
+    display: block;
+    background: linear-gradient(
+      to bottom,
+      rgba(212, 212, 212, 0.4) 0%,
+      transparent
+    );
+    opacity: 0;
+    height: 50%;
+    transition:
+      opacity 0.5s ease-out,
+      height 0.5s ease-out;
   }
-}
 
-.artist-link:hover::before,
-.artist-link:focus::before {
-  opacity: 0.8;
-  height: 90%;
-  box-shadow: 0 -4px 3px rgba(50, 50, 50, 0.75);
-}
+  .artist-photo {
+    transition:
+      transform 0.5s ease-out,
+      filter 0.5s ease-out;
+    filter: grayscale(100%);
+    height: 100%;
+  }
 
-.artist-link:hover .artist-photo,
-.artist-link:focus .artist-photo {
-  transform: scale(1.1) translateY(-15%);
-  filter: none;
-}
+  @keyframes floatSpace {
+    0%,
+    100% {
+      transform: translateY(-10%);
+    }
+    50% {
+      transform: translateY(-12%);
+    }
+  }
 
-@media (prefers-reduced-motion) {
+  @media (prefers-reduced-motion) {
+    .artist-link::before {
+      transition: none;
+    }
+  }
+
+  .artist-link:hover::before,
+  .artist-link:focus::before {
+    opacity: 0.8;
+    height: 90%;
+    box-shadow: 0 -4px 3px rgba(50, 50, 50, 0.75);
+  }
+
   .artist-link:hover .artist-photo,
   .artist-link:focus .artist-photo {
-    transform: scale(1);
+    transform: scale(1.2) translateY(-8%);
+    filter: none;
   }
-}
+
+  @media (prefers-reduced-motion) {
+    .artist-link:hover .artist-photo,
+    .artist-link:focus .artist-photo {
+      transform: scale(1);
+    }
+  }
 </style>

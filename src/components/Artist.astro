@@ -2,18 +2,25 @@
 const { name, src, instagram } = Astro.props;
 ---
 
-<a
-  class="artist-link group relative flex h-24 w-60 items-center justify-center overflow-hidden md:h-32"
-  title={`Visita la página del artista ${name}`}
-  href={src}
-  target="_blank"
-  rel="noopener noreferrer"
-  aria-label={`Link con la imagen de ${name} que lleva a ${instagram}`}
->
-  <img src={src} alt={`${name} logo`} class="artist-photo" />
-</a>
+<div class="artist-container flex flex-col items-center">
+  <a
+    class="artist-link group relative flex h-24 w-40 items-center justify-center overflow-hidden md:h-32 md:w-60"
+    title={`Visita la página del artista ${name}`}
+    href={src}
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label={`Link con la imagen de ${name} que lleva a ${instagram}`}
+  >
+    <img src={src} alt={`${name} logo`} class="artist-photo" />
+  </a>
+  <p class="artist-name mt-2 text-white text-center">{name}</p>
+</div>
 
 <style>
+  .artist-container {
+    margin-bottom: 1rem;
+  }
+
   .artist-link {
     height: 70%;
     background: linear-gradient(to bottom, rgb(0, 0, 0) 0%, transparent 100%);
@@ -74,7 +81,6 @@ const { name, src, instagram } = Astro.props;
   .artist-link:hover .artist-photo,
   .artist-link:focus .artist-photo {
     transform: scale(1.2) translateY(-8%);
-    filter: none;
   }
 
   @media (prefers-reduced-motion) {
@@ -82,5 +88,10 @@ const { name, src, instagram } = Astro.props;
     .artist-link:focus .artist-photo {
       transform: scale(1);
     }
+  }
+
+  .artist-name {
+    font-size: 1rem;
+    font-weight: 500;
   }
 </style>

@@ -1,19 +1,5 @@
 export const ticketsNotAvailable = false;
-export const preRegisterNotAvalible = true;
-
-export const links = [
-  // { href: "https://docs.google.com/forms/d/e/1FAIpQLScsXFUK5TeHC5pSBSAT_VI13Yiz5S2BqhfSDpVy_grsz2iwdA/viewform?pli=1", text: "Pre-Registro", disabled: preRegisterNotAvalible},
-  {
-    text: "Line Up",
-  },
-  {
-    phoneNumber: "573187866592",
-    message: "Hola ! Quiero mi ticket para DSTEV Sessions #2",
-    text: "Tickets",
-    disabled: ticketsNotAvailable,
-  },
-  // { phoneNumber: "573187866592", text: "Contact", disabled: false },
-];
+export const preRegisterNotAvailable = true;
 
 export const SPONSORS = [
   {
@@ -81,22 +67,21 @@ export const ARTISTS = [
   },
 ];
 
-export const title = "Inscríbete al WNT (Welcome New Talent)";
-
-export const description = `
-¿Eres DJ y quieres mostrar tu talento en un evento espectacular? ¡Esta es tu
-oportunidad! Estamos buscando nuevos talentos para Dstev Sessions 2, y tú
-podrías ser uno de ellos. Inscríbete al WNT (Welcome New Talent) y postúlate
-para ser parte de nuestra próxima edición. Queremos descubrir y apoyar a los
-mejores DJs emergentes, y brindarles una plataforma para que demuestren sus
-habilidades. `;
-
-export const participationSteps = [
-  "Completa el formulario de inscripción con tus datos personales y enlaces a tus trabajos previos.",
-  "Nuestro equipo revisará todas las postulaciones y seleccionará a los DJs más prometedores.",
-  "Si eres seleccionado, te contactaremos para los siguientespasos y detalles del evento.",
-];
-
-export const closingStatement = ` No pierdas la
-oportunidad de ser parte de Dstev Sessions 2 y llevar tu música al siguiente
-nivel. ¡Inscríbete ahora y demuestra lo que tienes! `;
+export const WELCOME_NEW_TALENT = {
+  title: "Inscríbete al WNT (Welcome New Talent)",
+  description: `
+    ¿Eres DJ y quieres mostrar tu talento en un evento espectacular? ¡Esta es tu
+    oportunidad! Estamos buscando nuevos talentos para Dstev Sessions 2, y tú
+    podrías ser uno de ellos. Inscríbete al WNT (Welcome New Talent) y postúlate
+    para ser parte de nuestra próxima edición. Queremos descubrir y apoyar a los
+    mejores DJs emergentes, y brindarles una plataforma para que demuestren sus
+    habilidades. `,
+  participationSteps: [
+    "Completa el formulario de inscripción con tus datos personales y enlaces a tus trabajos previos.",
+    "Nuestro equipo revisará todas las postulaciones y seleccionará a los DJs más prometedores.",
+    "Si eres seleccionado, te contactaremos para los siguientes pasos y detalles del evento.",
+  ],
+  closingStatement: ` No pierdas la
+    oportunidad de ser parte de Dstev Sessions 2 y llevar tu música al siguiente
+    nivel. ¡Inscríbete ahora y demuestra lo que tienes! `,
+};

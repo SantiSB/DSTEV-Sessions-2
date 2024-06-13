@@ -1,39 +1,6 @@
 export const ticketsNotAvailable = false;
 export const preRegisterNotAvailable = true;
 
-export const SPONSORS = [
-  {
-    id: 1,
-    nombre: "1537",
-    instagram: "https://www.instagram.com/1537cs/",
-    src: "/icons/sponsors/1537.png",
-  },
-  {
-    id: 2,
-    nombre: "360cs",
-    instagram: "https://www.instagram.com/360cs1/",
-    src: "/icons/sponsors/360.png",
-  },
-  {
-    id: 3,
-    nombre: "Jagermeister",
-    instagram: "https://www.instagram.com/jagermeister_co/",
-    logo: "/icons/sponsors/Jagermeister.png",
-  },
-  {
-    id: 4,
-    nombre: "Selector",
-    instagram: "https://www.instagram.com/selectormusic_/",
-    logo: "/icons/sponsors/Selector.png",
-  },
-  {
-    id: 5,
-    nombre: "Arkhes",
-    instagram: "https://www.instagram.com/__arkhes/",
-    logo: "/icons/sponsors/Arkhes.png",
-  },
-];
-
 export const ARTISTS = [
   {
     id: 1,

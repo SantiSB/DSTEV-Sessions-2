@@ -1,0 +1,52 @@
+---
+import {
+  title,
+  description,
+  participationSteps,
+  closingStatement,
+} from "./Data";
+---
+
+<section>
+  <div
+    class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6"
+  >
+    <h2
+      class="mb-4 text-4xl tracking-tight font-extrabold text-white text-center md:col-span-2"
+    >
+      {title}
+    </h2>
+    <img
+      class="w-full transition transform duration-500 ease-in-out hover:scale-105 filter grayscale"
+      src="images/artists/SecretArtist.png"
+      alt="dashboard image"
+    />
+    <div class="mt-4 md:mt-0 bg-black bg-opacity-50 p-4 rounded-lg">
+      <p class="mb-6 font-light text-white md:text-lg">
+        {description}
+      </p>
+      <div>
+        <h3 class="mb-4 text-2xl tracking-tight font-bold text-white">
+          ¿Cómo participar?
+        </h3>
+        <ol
+          class="list-decimal list-inside mb-6 font-light text-white md:text-lg"
+        >
+          {participationSteps.map((step) => <li>{step}</li>)}
+        </ol>
+        <p class="mb-6 font-light text-white md:text-lg">
+          {closingStatement}
+        </p>
+      </div>
+      <div class="flex justify-center sm:justify-start">
+        <a
+          href="#"
+          class="inline-block mt-5 px-8 py-4 text-lg lg:text-xl font-semibold transition duration-500 ease-in-out transform text-white hover:scale-110 bg-black hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2"
+          style="--tw-bg-opacity: 1; background-color: rgba(0,0,0,var(--tw-bg-opacity)); backdrop-filter: blur(10px); animation: border-flashing 2s infinite; box-shadow: 0 0 20px rgba(0, 255, 42, 0.111); border: 2px solid transparent;"
+        >
+          Inscríbete ahora
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

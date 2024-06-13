@@ -4,7 +4,7 @@ import Artist from "./Artist.astro";
 import { ARTISTS, ticketsNotAvailable } from "./Data";
 ---
 
-<section class="mb-10 md:mb-0">
+<section id="lineUp" class="mb-10 md:mb-0">
   <h2 class="text-center text-4xl text-3d font-goldman text-white">LINE UP</h2>
   <div class="mt-20 md:mt-32 space-y-8 px-5 lg:px-32 xl:px-40">
     <!-- Versión web: Primera fila con 2 artistas -->
@@ -52,7 +52,7 @@ import { ARTISTS, ticketsNotAvailable } from "./Data";
       phoneNumber="573187866592"
       message="Hola ! Quiero mi ticket para DSTEV Sessions #2"
       isNotAvailable={ticketsNotAvailable}
-      text="Tickets"
+      text="Comprar Tickets"
     />
   </div>
 </section>

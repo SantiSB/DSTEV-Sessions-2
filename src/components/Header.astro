@@ -1,6 +1,11 @@
 ---
 import { generateWhatsAppLink } from "../utils/whatsApp";
 import { links } from "./Data";
+
+const hrefWhatsApp = generateWhatsAppLink(
+  "573187866592",
+  "Hola ! Quiero mi ticket para DSTEV Sessions #2"
+);
 ---
 
 <header
@@ -9,31 +14,29 @@ import { links } from "./Data";
   <a
     href="https://www.instagram.com/__arkhes/"
     class="hover:scale-110 transition-transform duration-300"
-    target="_blank"
   >
     <img
       src="/icons/MainIcon.png"
-      class="h-8 sm:h-10 fill-current text-black"
+      class="h-12 sm:h-16 fill-current text-black"
       alt="Santiago Salas Bolaños Logo"
     />
   </a>
 
-  <nav class="flex flex-row gap-x-4 text-base md:text-xl">
-    {
-      links.map((link) => {
-        const href = generateWhatsAppLink(link.phoneNumber, link.message);
-        return (
-          <a
-            class={`text-3d transition-transform duration-300 ease-in-out transform ${link.disabled ? "cursor-not-allowed text-gray-500" : "hover:scale-110 transition-transform duration-300 text-white"} font-semibold`}
-            href={link.disabled ? undefined : href}
-            aria-disabled={link.disabled ? "true" : "false"}
-            tabindex={link.disabled ? -1 : undefined}
-            target="_blank"
-          >
-            {link.text}
-          </a>
-        );
-      })
-    }
+  <nav class="flex flex-row gap-x-5 text-base md:text-xl">
+    <a
+      class={`text-3d transition-transform duration-300 ease-in-out transform hover:scale-110 text-white font-semibold`}
+      href={"#lineUp"}
+      aria-disabled={"false"}
+    >
+      Line Up
+    </a>
+    <a
+      class={`text-3d transition-transform duration-300 ease-in-out transform hover:scale-110 text-white font-semibold`}
+      href={hrefWhatsApp}
+      aria-disabled={"false"}
+      target="_blank"
+    >
+      Tickets
+    </a>
   </nav>
 </header>

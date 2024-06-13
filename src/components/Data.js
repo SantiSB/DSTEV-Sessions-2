@@ -68,7 +68,6 @@ export const ARTISTS = [
 ];
 
 export const WELCOME_NEW_TALENT = {
-  title: "Inscríbete al WNT (Welcome New Talent)",
   description: `
     ¿Eres DJ y quieres mostrar tu talento en un evento espectacular? ¡Esta es tu
     oportunidad! Estamos buscando nuevos talentos para Dstev Sessions 2, y tú

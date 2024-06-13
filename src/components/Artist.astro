@@ -2,7 +2,7 @@
 const { name, src, instagram } = Astro.props;
 ---
 
-<div class="artist-container flex flex-col items-center">
+<div class="flex flex-col items-center">
   <a
     class="artist-link group relative flex h-24 w-40 items-center justify-center overflow-hidden md:h-32 md:w-60"
     title={`Visita la página del artista ${name}`}
@@ -17,12 +17,8 @@ const { name, src, instagram } = Astro.props;
 </div>
 
 <style>
-  .artist-container {
-    margin-bottom: 1rem;
-  }
-
   .artist-link {
-    height: 70%;
+    height: 90%;
     background: linear-gradient(to bottom, rgb(0, 0, 0) 0%, transparent 100%);
     transition: all 0.5s ease-out;
     backdrop-filter: blur(10px);
